@@ -58,10 +58,10 @@ public class PathFollower : MonoBehaviour {
 			Quaternion targetRotation = Quaternion.LookRotation(targetObject.position - transform.position);
 			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
      
-			
 			if (Vector3.Distance (transform.position, targetPoint.position) < 0.1f) {
 				//stops moving camera if it's at the last waypoint
 				index++;
+				
 
 				 // Ensure that we are not trying to access a speed if we haven't created one in the Unity editor
                 if (index < speeds.Length) {
