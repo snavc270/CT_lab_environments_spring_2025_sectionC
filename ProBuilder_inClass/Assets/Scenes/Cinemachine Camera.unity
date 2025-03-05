@@ -10382,6 +10382,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -3074906457945905634, guid: 52d1ab245305f4a6e9c11a3c60f6596f, type: 2}
     value: {fileID: 330585548}
+  - key: {fileID: -711115030426627120, guid: 52d1ab245305f4a6e9c11a3c60f6596f, type: 2}
+    value: {fileID: 1059071086}
   m_ExposedReferences:
     m_References:
     - 61701b815d4394314aacb1147bed023c: {fileID: 1059071084}
@@ -22884,6 +22886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059071085}
   - component: {fileID: 1059071084}
+  - component: {fileID: 1059071086}
   m_Layer: 0
   m_Name: CinemachineCamera 3
   m_TagString: Untagged
@@ -22942,13 +22945,35 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059071083}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04188329, y: -0.7036906, z: 0.028987283, w: 0.70867836}
+  m_LocalRotation: {x: 0.04188329, y: -0.7036906, z: 0.028987287, w: 0.70867836}
   m_LocalPosition: {x: 9.88, y: 2.07, z: 11.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 5.748, y: 270.353, z: -1.029}
+--- !u!95 &1059071086
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059071083}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1075154536
 GameObject:
   m_ObjectHideFlags: 0
