@@ -27,6 +27,7 @@ public class AnalogRead : MonoBehaviour {
     {
         readValue = UduinoManager.Instance.analogRead(AnalogPin.A0, "PinRead");
         lightSouce.intensity = readValue / 400.0f;
+        // Debug.Log(readValue); 
 
         test = UduinoManager.Instance.analogRead(AnalogPin.A1, "PinRead");
         lightSouce2.intensity = test / 200.0f;

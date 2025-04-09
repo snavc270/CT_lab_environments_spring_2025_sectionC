@@ -14,6 +14,9 @@ public class ChangeLightWithDistance : MonoBehaviour
     public float maxDistance = 300f; // Farthest distance the sensor detects
     float distance = 0;
 
+    public int distance1; 
+    public int distance2; 
+
     void Start() {
       UduinoManager.Instance.OnDataReceived += DataReceived;
     }
@@ -23,14 +26,23 @@ public class ChangeLightWithDistance : MonoBehaviour
 
         //if you wanted to map an object's position to your distance sensor
     //    distancePlane.transform.position = new Vector3(0, 0, distance ); 
-        float mappedIntensity = Mathf.Lerp(minIntensity, maxIntensity, Mathf.InverseLerp(maxDistance, minDistance, distance)); 
+        float mappedIntensity = Mathf.Lerp(minIntensity, maxIntensity, Mathf.InverseLerp(maxDistance, minDistance, distance1)); 
     
         // Apply intensity to the light
         lightSource.intensity = mappedIntensity;
-        // Debug.Log(distance);
+        
+
     }
 
     void DataReceived(string data, UduinoDevice baord) {
-       bool ok = float.TryParse(data, out distance ); 
+       string[] values = data.Split (','); 
+       if (values.Length == 2){ //making sure both sensors are sending values
+        if (int.TryParse(values[0].Trim(), out int v1) && int.TryParse(values[1].Trim(), out int v2))
+            {
+                distance1 = v1;
+                distance2 = v2;
+                Debug.Log($"Parsed Values -> Value 1: {distance1}, Value 2: {distance2}");
+            }
+       }
      }
 }
